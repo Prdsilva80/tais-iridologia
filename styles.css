@@ -1,0 +1,474 @@
+/* Reset de estilos para garantir uma base consistente */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  background-color: #f0f0f0;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.logo {
+  position: absolute;
+  top: 6.25rem;
+  left: 0.625rem;
+  width: 25rem;
+  z-index: 0;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav li {
+  display: inline-block;
+  margin-right:  1.25rem;
+}
+
+.nav li:last-child {
+  margin-right: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ff8800;
+}
+
+/* Estilizar os links de navegação quando forem visitados */
+.nav a:visited {
+  color: #0A6C8A;
+}
+
+/* Estilos para a seção "Início" */
+#home {
+  background-image: url("./assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+
+#home .rgba {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.58);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-text {
+  margin-top: 12rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Estilos para a seção "Sobre" */
+.sobre {
+  background-color: #B2CED8;
+  color: #0A6C8A;
+  padding: 2rem;
+}
+
+.sobre .images {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.sobre .images img {
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.sobre .images img:hover {
+  transform: scale(1.05);
+}
+
+.sobre .text {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.about {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.aboutme {
+  text-align: left;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Estilos para a seção "Serviços" */
+.servicos {
+  background-color: #0A6C8A;
+  color: white;
+  padding: 2rem;
+}
+
+.services {
+  text-align: center;
+}
+
+.servicos .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.servicos .item {
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+.servicos .card {
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.servicos .card img {
+  width: 60%;
+  height: 200px; /* Defina a altura desejada */
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.servicos .card:hover {
+  transform: translateY(-10px) translateX(-10px);
+}
+
+.servicos .card img:hover {
+  transform: scale(1.1);
+}
+
+.servicos .item-content {
+  margin-top: 1rem;
+}
+
+.servicos .item h3 {
+  margin-top: 1rem;
+}
+
+.servicos .item p {
+  margin-top:  0.5rem;
+}
+
+/* Estilos para a seção "Comentários" */
+.comentarios {
+  background-color: #B2CED8;
+  color: #0A6C8A;
+  padding: 2.5rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link-container p.politic {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #666;
+}
+
+.comments {
+  padding-right: 2.5rem;
+  margin-bottom: 1.25rem;
+  font-weight: bold;
+}
+
+.coments-image {
+  position: absolute;
+  margin-top: 1rem;
+  top: 0;
+  right: 0;
+  width: 15rem;
+}
+
+.comentarios .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 62.5rem;
+  margin: 0 auto;
+}
+
+.comment {
+  width: 45%;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+}
+
+.comment img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 1.25rem;
+}
+
+.comment-content h4 {
+  margin-bottom: 1rem;
+}
+
+.comment-content p {
+  font-size: 0.875rem;
+}
+
+/* Estilos para a seção "Contato" */
+.contato {
+  background-color: #0A6C8A;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1.25rem; /* Adiciona um espaçamento interno para melhor visualização */
+}
+
+.endereco {
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.mapa {
+  width: 100%;
+  margin-top: 1rem;
+  height: 15rem; /* Ajuste a altura do mapa conforme necessário */
+  border-radius: 10px;
+}
+
+.formulario {
+  width: 100%;
+}
+
+.formulario h3 {
+  margin-bottom: 1.25rem;
+}
+
+.form {
+  margin-bottom: 1rem;
+}
+
+.formulario input,
+.formulario textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.625rem;
+  padding: 0.625rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formulario button {
+  background-color:  #333;
+  color: white;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para o link do Instagram */
+.endereco a img {
+  display: block;
+  width: 3.125rem;
+  margin-top: 0.625rem;
+  border-radius: 50%;
+}
+
+/* Estilos para o botão do WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  width: 3.75rem;
+  height: 3.75rem;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999; /* Garante que o botão fique acima de outros elementos */
+}
+
+.whatsapp-button img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* Estilos para o footer */
+footer {
+  background-color: #f8f8f8;
+  padding: 0.625rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #777;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content span {
+  margin-right: 0.625rem;
+}
+
+.footer-content a {
+  color: #777;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+/* Adicionando @media queries para tornar o site responsivo */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 1rem; /* Ajuste o valor conforme necessário para telas menores */
+  }
+
+  header {
+    padding: 0.5rem 0; /* Ajuste o valor conforme necessário para telas menores */
+  }
+
+  .logo {
+    top: 1.5rem; /* Ajuste o valor conforme necessário para telas menores */
+    left: 0.5rem; /* Ajuste o valor conforme necessário para telas menores */
+    width: 15rem; /* Ajuste o valor conforme necessário para telas menores */
+  }
+
+  .nav li {
+    margin-right: 0.5rem; /* Ajuste o valor conforme necessário para telas menores */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #home .rgba {
+    background-color: rgba(0, 0, 0, 0.75); /* Ajuste o valor conforme necessário para telas menores */
+  }
+
+  .welcome-text {
+    margin-top: 6rem; /* Ajuste o valor conforme necessário para telas menores */
+    font-size: 1.2rem; /* Ajuste o valor conforme necessário para telas menores */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sobre .images {
+    flex-wrap: wrap;
+    gap: 1rem; /* Ajuste o espaçamento entre as imagens para telas menores */
+  }
+
+  .sobre .images img {
+    width: 100%;
+  }
+
+  .sobre .text {
+    text-align: justify; /* Alinha o texto justificado para telas menores */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .servicos .container {
+    justify-content: center;
+  }
+
+  .servicos .item {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .comentarios .container {
+    justify-content: center;
+  }
+
+  .comment {
+    width: 100%;
+  }
+
+  .coments-image {
+    position: relative;
+    margin-top: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 15rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .endereco,
+  .formulario {
+    width: 100%;
+  }
+
+  .endereco a img {
+    margin-top: 0;
+  }
+
+  .whatsapp-button {
+    bottom: 0.625rem;
+    right: 0.625rem;
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+}
