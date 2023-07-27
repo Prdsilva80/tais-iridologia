@@ -10,17 +10,12 @@ body {
   line-height: 1.6;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
+/* Adicione as seguintes regras CSS ao seu estilo */
 header {
   background-color: #f0f0f0;
-  padding: 1rem 0;
+  padding: -3rem 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
@@ -29,21 +24,27 @@ header {
   z-index: 1;
 }
 
-.logo {
-  position: absolute;
-  top: 6.25rem;
-  left: 0.625rem;
-  width: 25rem;
-  z-index: 0;
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 75rem;
+  margin: 0 auto;
 }
 
+.logo img {
+  width: 15rem;
+  margin: 0 4rem;
+}
+
+/* Estilos para a lista de navegação */
 .nav ul {
   list-style: none;
+  display: flex;
 }
 
 .nav li {
-  display: inline-block;
-  margin-right:  1.25rem;
+  margin-right: 1rem;
 }
 
 .nav li:last-child {
