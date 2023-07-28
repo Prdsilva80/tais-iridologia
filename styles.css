@@ -21,7 +21,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 999;
 }
 
 .container {
@@ -233,7 +233,7 @@ header {
 
 .comentarios .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   max-width: 62.5rem;
@@ -241,8 +241,8 @@ header {
 }
 
 .comment {
-  width: 45%;
-  margin-bottom: 1.25rem;
+  width: 30%;
+  margin: 1.25rem;
   display: flex;
   align-items: center;
   text-align: left;
@@ -251,9 +251,17 @@ header {
   padding: 1.25rem;
 }
 
+.swiper-slide-active .comment {
+  width: 80%; /* Define o tamanho do comentário central */
+}
+
+.swiper-container {
+  overflow: hidden;
+}
+
 .comment img {
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   border-radius: 50%;
   margin-right: 1.25rem;
 }
@@ -454,6 +462,61 @@ footer {
     width: 100%;
     max-width: 15rem;
   }
+}
+
+/* Estilos para dispositivos menores */
+@media screen and (max-width: 768px) {
+  .swiper-slide {
+    width: 100%; /* Exibe os comentários em uma única coluna */
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  max-width: 62.5rem; /* Defina o tamanho máximo do carrossel */
+  margin: 0 auto;
+}
+
+.comment {
+  width: 30%; /* Diminui o width das caixas de comentários */
+  margin-right: 2.5%; /* Adiciona espaço entre as caixas de comentários */
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+}
+
+/* Define o height apenas para telas menores que 768px (modo mobile) */
+@media (max-width: 767px) {
+  .comment {
+    height: 20rem;
+  }
+}
+
+.comment img {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  margin-right: 1.25rem;
+}
+
+.comment-content h4 {
+  margin-bottom: 1rem;
+}
+
+.comment-content p {
+  font-size: 0.875rem;
+}
+
+/* Estilos para o carrossel */
+.swiper-pagination {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media only screen and (max-width: 768px) {

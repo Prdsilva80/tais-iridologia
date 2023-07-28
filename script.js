@@ -1,3 +1,24 @@
+document.addEventListener("DOMContentLoaded", function () {
+  var mySwiper = new Swiper(".swiper-container", {
+    loop: true, // O carrossel vai continuar deslizando infinitamente
+    slidesPerView: 1, // Quantos slides exibir por vez
+    spaceBetween: 0, // Espaço entre os slides
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 7000, // Tempo de transição entre os slides em milissegundos (7 segundos no exemplo)
+      speed: 800, // Tempo de transição
+      disableOnInteraction: false, // Permite que o autoplay continue mesmo quando o usuário interage com o carrossel
+    },
+  });
+});
+
 document.getElementById('contact-form').addEventListener('submit', function (event) {
   event.preventDefault(); // Impede o envio do formulário pelo navegador
 
