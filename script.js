@@ -58,3 +58,26 @@ const contactForm = document.getElementById('contact-form');
     event.preventDefault(); // Impede o envio padrão do formulário
     contactForm.reset();
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollButton = document.querySelector(".scroll-to-top");
+
+    function handleScroll() {
+        if (window.scrollY > 300) {
+            scrollButton.classList.add("show");
+        } else {
+            scrollButton.classList.remove("show");
+        }
+    }
+
+    function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    scrollButton.addEventListener("click", scrollToTop);
+});

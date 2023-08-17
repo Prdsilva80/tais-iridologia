@@ -12,7 +12,7 @@ body {
 
 /* Adicione as seguintes regras CSS ao seu estilo */
 header {
-  background-color: #f0f0f0;
+  background-color: #FFFFFF;
   padding: -3rem 0;
   display: flex;
   justify-content: center;
@@ -32,39 +32,14 @@ header {
   margin: 0 auto;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .logo img {
   width: 15rem;
-  margin: 0 4rem;
-}
-
-/* Estilos para a lista de navegação */
-.nav ul {
-  list-style: none;
-  display: flex;
-}
-
-.nav li {
-  margin-right: 1rem;
-}
-
-.nav li:last-child {
-  margin-right: 0;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 700;
-  transition: color 0.3s ease;
-}
-
-.nav a:hover {
-  color: #ff8800;
-}
-
-/* Estilizar os links de navegação quando forem visitados */
-.nav a:visited {
-  color: #0A6C8A;
 }
 
 /* Estilos para a seção "Início" */
@@ -388,35 +363,86 @@ footer {
   text-decoration: underline;
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 1.875rem;
+  right: 43.75rem;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 9999;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 1.875rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 9999;
+}
+
+.scroll-link {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  background-color: #333;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  position: relative; /* Adicione esta linha */
+  z-index: 1; /* Adicione esta linha */
+}
+
+.scroll-link img {
+  position: absolute; /* Adicione esta linha */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Adicionando @media queries para tornar o site responsivo */
 @media only screen and (max-width: 768px) {
   .container {
-    padding: 1rem; /* Ajuste o valor conforme necessário para telas menores */
+    padding: 1rem;
   }
 
   header {
-    padding: 0.5rem 0; /* Ajuste o valor conforme necessário para telas menores */
+    padding: 0.5rem 0;
   }
 
   .logo {
-    top: 1.5rem; /* Ajuste o valor conforme necessário para telas menores */
-    left: 0.5rem; /* Ajuste o valor conforme necessário para telas menores */
-    width: 15rem; /* Ajuste o valor conforme necessário para telas menores */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1.5rem;
+    left: 0.5rem;
+    width: 100%; /* Ocupar a largura total do contêiner pai */
   }
-
-  .nav li {
-    margin-right: 0.5rem; /* Ajuste o valor conforme necessário para telas menores */
+  .logo img {
+    width: 15rem;
+    margin: 0;
   }
 }
 
 @media only screen and (max-width: 768px) {
   #home .rgba {
-    background-color: rgba(0, 0, 0, 0.75); /* Ajuste o valor conforme necessário para telas menores */
+    background-color: rgba(0, 0, 0, 0.75);
   }
 
   .welcome-text {
-    margin-top: 6rem; /* Ajuste o valor conforme necessário para telas menores */
-    font-size: 1.2rem; /* Ajuste o valor conforme necessário para telas menores */
+    margin-top: 6rem;
+    font-size: 1.2rem;
   }
 }
 
