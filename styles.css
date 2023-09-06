@@ -562,3 +562,11 @@ footer {
     height: 3.125rem;
   }
 }
+
+/* Consulta de mídia para dispositivos móveis (max-width: 768px, você pode ajustar esse valor) */
+@media (max-width: 768px) {
+  .scroll-to-top.show {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
